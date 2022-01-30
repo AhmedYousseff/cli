@@ -1,4 +1,5 @@
-FROM openjdk:8-jre-slim
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
 EXPOSE 8080
 COPY ./target/cli-0.0.1-SNAPSHOT.jar /usr/local/bin/cli
 WORKDIR /usr/local/bin
